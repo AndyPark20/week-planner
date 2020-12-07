@@ -11,7 +11,7 @@ body {
   width: 100%;
   text-align: center;
 }
-/* 
+/*
 .column-full {
 
 } */
@@ -107,4 +107,8 @@ body {
 
 .border-solid{
   border: 2px solid black;
+}
+
+.hidden {
+  display:none;
 }

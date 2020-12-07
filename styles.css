@@ -1,0 +1,22 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.column-full {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .row {
+  display:flex;
+  flex-direction:column;
+} */

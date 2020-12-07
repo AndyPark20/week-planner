@@ -16,14 +16,14 @@
 <body>
   <div class="container">
     <div class="modal">
+      <div class="pop-container">
       <div class="pop-up">
         <form id="form-input">
           <div class="modal-row">
             <h2>Add Entry</h2>
           </div>
           <div class="input-row">
-
-            <select name="days" id="days">
+            <select class="input-style" name="days" id="days">
               <option value="" selected disabled>Day of Week</option>
               <option value="sunday">Sunday</option>
               <option value="monday">Monday</option>
@@ -33,16 +33,17 @@
               <option value="friday">Friday</option>
               <option value="saturday">Saturday</option>
             </select>
-            <input type="time" class="time" name="time" min="12:00" max="24:00">
+            <input type="time" class="time input-style" name="time" min="12:00" max="24:00">
+            </div>
             <div class="description-row">
-              <textarea class="description" type="text" rows="4" cols="30" name="description"
+              <textarea class="description" type="text" rows="4" cols="60" name="description"
                 placeholder="Description"></textarea>
             </div>
             <div class="button-row">
               <button class="submit" type="submit">Submit</button>
             </div>
-          </div>
         </form>
+      </div>
       </div>
     </div>
     <div class="row">

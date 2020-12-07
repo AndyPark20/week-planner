@@ -1,62 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  +
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week Planner</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
-</head>
-+
-
-<body>
-  <div class="container">
-    <div class="modal hidden">
-      <div class="pop-container">
-      <div class="pop-up">
-        <form id="form-input">
-          <div class="modal-row">
-            <h2>Add Entry</h2>
+  <body>
+    <div class="container">
+      <div class="modal hidden">
+        <div class="pop-container">
+          <div class="pop-up">
+            <form id="form-input">
+              <div class="modal-row">
+                <h2>Add Entry</h2>
+              </div>
+              <div class="input-row margin-top">
+                <select class="input-style border-solid" name="days" id="days">
+                  <option value="" selected disabled>Day of Week</option>
+                  <option value="sunday">Sunday</option>
+                  <option value="monday">Monday</option>
+                  <option value="tuesday">Tuesday</option>
+                  <option value="wednesday">Wednesday</option>
+                  <option value="thursday">Thursday</option>
+                  <option value="friday">Friday</option>
+                  <option value="saturday">Saturday</option>
+                </select>
+                <input
+                  type="time"
+                  class="time input-style border-solid"
+                  name="time"
+                  min="12:00"
+                  max="24:00"
+                />
+              </div>
+              <div class="description-row margin-top">
+                <textarea
+                  class="description border-solid"
+                  type="text"
+                  rows="4"
+                  cols="60"
+                  name="description"
+                  placeholder="Description"
+                ></textarea>
+              </div>
+              <div class="button-row margin-top">
+                <button class="submit" type="submit">Submit</button>
+              </div>
+            </form>
           </div>
-          <div class="input-row margin-top">
-            <select class="input-style border-solid" name="days" id="days">
-              <option value="" selected disabled>Day of Week</option>
-              <option value="sunday">Sunday</option>
-              <option value="monday">Monday</option>
-              <option value="tuesday">Tuesday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              <option value="saturday">Saturday</option>
-            </select>
-            <input type="time" class="time input-style border-solid" name="time" min="12:00" max="24:00">
-            </div>
-            <div class="description-row margin-top">
-              <textarea class="description border-solid" type="text" rows="4" cols="60" name="description"
-                placeholder="Description"></textarea>
-            </div>
-            <div class="button-row margin-top">
-              <button class="submit" type="submit">Submit</button>
-            </div>
-        </form>
+        </div>
       </div>
+      <div class="row">
+        <div class="column-full">
+          <h1>Weekly Planner</h1>
+        </div>
+        <div class="column-weekday">
+          <button class="weekday-btn" data-view="sunday">Sunday</button>
+          <button class="weekday-btn" data-view="monday">monday</button>
+          <button class="weekday-btn" data-view="tuesday">tuesday</button>
+          <button class="weekday-btn" data-view="wednesday">wednesday</button>
+          <button class="weekday-btn" data-view="thursday">thursday</button>
+          <button class="weekday-btn" data-view="friday">friday</button>
+          <button class="weekday-btn" data-view="saturday">saturday</button>
+        </div>
+        <div class="column-full">
+          <button type="submit" class="button">Add Entry</button>
+        </div>
+        <div class="column-full">
+          <h2>Scheduled Events for <span id="days"></span></h2>
+        </div>
+        <div class="column-full">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
     </div>
-    <div class="row">
-      <div class="column-full">
-        <h1>Weekly Planner</h1>
-      </div>
-      <div class="column-full">
-        <button type="submit" class="button">Add Entry</button>
-      </div>
-    </div>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </div>
-</body>
-
+  </body>
 </html>

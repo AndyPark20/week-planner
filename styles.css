@@ -11,10 +11,10 @@ body {
   width: 100%;
   text-align: center;
 }
-
+/* 
 .column-full {
 
-}
+} */
 
 .row {
   display:flex;
@@ -33,17 +33,19 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.button:hover {
+.button:hover, .submit:hover{
   background-color: lightblue;
   cursor: pointer;
 }
 
 .pop-up {
-  height:50%;
+  /* height:50%; */
   width:60%;
   background-color:white;
   border:1px solid black;
   align-self:center;
+  display:flex;
+  justify-content: center;
 }
 
 .modal {
@@ -61,6 +63,7 @@ body {
   width: 107px;
   font-family: 'Noto Sans', sans-serif, helvetica;
   font-size: 12px;
+  margin-right:10px;
 
 }
 
@@ -81,4 +84,27 @@ body {
 
 .pop-container {
   width: 80%;
+  display:flex;
+  justify-content: center;
+}
+
+.margin-top{
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.submit{
+  font-family:'Noto Sans', sans-serif;
+  font-size: 12px;
+  width: 80px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 5px 4px 5px 0px black;
+  transition: all 1s ease-in-out;
+}
+
+.border-solid{
+  border: 2px solid black;
 }

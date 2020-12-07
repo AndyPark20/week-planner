@@ -15,8 +15,8 @@ $addEntryBtn.addEventListener('click', hideModal)
 
 
 
-// $userSubmit.addEventListener('submit', function(event){
+$userSubmit.addEventListener('submit', function(event){
+  event.preventDefault();
 
 
-
-// })
+})

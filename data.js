@@ -1,1 +1,7 @@
-var userEntry =
+var userEntry = [
+  {
+    weekday:'',
+    time: '',
+    info:''
+  }
+];

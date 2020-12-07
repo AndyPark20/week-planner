@@ -9,14 +9,31 @@ body {
 
 .container {
   width: 100%;
+  text-align: center;
 }
 
 .column-full {
-  display: flex;
-  flex-direction: column;
+
 }
 
-/* .row {
+.row {
   display:flex;
   flex-direction:column;
-} */
+}
+
+.button {
+  font-family:'Noto Sans', sans-serif;
+  font-size: 14px;
+  width: 142px;
+  height: 34px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 5px 4px 5px 0px black;
+  transition: all 1s ease-in-out;
+}
+
+.button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}

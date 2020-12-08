@@ -22,6 +22,12 @@ document.addEventListener("click", function (event) {
 
 $userSubmit.addEventListener("submit", function (event) {
   var $userWeekday = $userSubmit.elements.days.value;
+  weekday[$userWeekday].entries.time.push()
+  // Var day
+  // Var time =
+  // Var description
+  // Var weekday[day] = { time, description }
+
   console.log($userWeekday);
 
   event.preventDefault();

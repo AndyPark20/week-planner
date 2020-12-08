@@ -10,6 +10,8 @@ function hideModal(e) {
   }
 }
 
+
+
 $addEntryBtn.addEventListener("click", hideModal);
 
 document.addEventListener("click", function (event) {
@@ -21,28 +23,33 @@ document.addEventListener("click", function (event) {
 });
 
 $userSubmit.addEventListener("submit", function (event) {
-  var $userWeekday = $userSubmit.elements.days.value;
-  weekday[$userWeekday].entries.time.push()
-  // Var day
-  // Var time =
-  // Var description
-  // Var weekday[day] = { time, description }
-
-  console.log($userWeekday);
-
   event.preventDefault();
+  var $userWeekday = $userSubmit.elements.days.value;
+  var time = $userSubmit.elements.time.value;
+  var description = $userSubmit.elements.description.value;
+  var entry = {time,description};
+  weekday[$userWeekday].entries.push(entry);
+  // renderElements(entry);
+  $modal.classList.add('hidden');
+  $userSubmit.reset();
 });
+
 
 function renderElements(object) {
   var $row = document.createElement("tr");
   var $tableData = document.createElement("td");
   var $tableDataTwo = document.createElement("td");
   var $tablePosition = document.querySelector(".dataRow");
-  // $tableData.textContent = 'Hello Cohort';
+  $tableData.textContent = object.time;
   $row.appendChild($tableData);
-  // $tableDataTwo.textContent=""
+  $tableDataTwo.textContent= object.description;
   $row.appendChild($tableDataTwo);
-  $tablePosition.appendChild($row);
+  return $row;
+}
 
-  return $tableData;
+function appendElements(array) {
+  for(var i = 0; i < array.length; i++ ) {
+    var position
+    array[i].
+  }
 }
